@@ -31,12 +31,6 @@ contract MintingNFT is ERC721Enumerable, Ownable {
         tokenIds = tokenIdToMint;
         _safeMint(msg.sender, tokenIds);
     }
-    // function mint() public payable onlyWhenNotPaused {
-    //     // require(tokenIds < maxTokenIds, "All tokens have been minted");
-    //     require(msg.value >= _price, "Ether value sent is not correct");
-    //     tokenIds += 1;
-    //     _safeMint(msg.sender, tokenIds);
-    // }
 
     function _baseURI() internal view virtual override returns (string memory) {
         return _baseTokenURI;

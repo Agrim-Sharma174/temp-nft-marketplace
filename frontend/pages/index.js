@@ -20,7 +20,7 @@ export default function Home() {
     {
       "name": "1",
       "description": "This is a cloth product",
-      "image": "ipfs://QmaBeK3ewQsYHcyXKij2oZWdFGbCxefQGXribP762xx4iM/1.jpeg"
+      "image": "https://coffee-delicate-fox-499.mypinata.cloud/ipfs/QmaBeK3ewQsYHcyXKij2oZWdFGbCxefQGXribP762xx4iM/2.jpeg"
     },
     {
       "name": "2",
@@ -30,22 +30,22 @@ export default function Home() {
     {
       "name": "3",
       "description": "This is a cloth product",
-      "image": "ipfs://QmaBeK3ewQsYHcyXKij2oZWdFGbCxefQGXribP762xx4iM/3.jpeg"
+      "image": "https://coffee-delicate-fox-499.mypinata.cloud/ipfs/QmaBeK3ewQsYHcyXKij2oZWdFGbCxefQGXribP762xx4iM/2.jpeg"
     },
     {
       "name": "4",
       "description": "This is a cloth product",
-      "image": "ipfs://QmaBeK3ewQsYHcyXKij2oZWdFGbCxefQGXribP762xx4iM/4.jpeg"
+      "image": "https://coffee-delicate-fox-499.mypinata.cloud/ipfs/QmaBeK3ewQsYHcyXKij2oZWdFGbCxefQGXribP762xx4iM/2.jpeg"
     },
     {
       "name": "5",
       "description": "This is a cloth product",
-      "image": "ipfs://QmaBeK3ewQsYHcyXKij2oZWdFGbCxefQGXribP762xx4iM/5.jpeg"
+      "image": "https://coffee-delicate-fox-499.mypinata.cloud/ipfs/QmaBeK3ewQsYHcyXKij2oZWdFGbCxefQGXribP762xx4iM/2.jpeg"
     },
     {
       "name": "6",
       "description": "This is a cloth product",
-      "image": "ipfs://QmaBeK3ewQsYHcyXKij2oZWdFGbCxefQGXribP762xx4iM/6.jpeg"
+      "image": "https://coffee-delicate-fox-499.mypinata.cloud/ipfs/QmaBeK3ewQsYHcyXKij2oZWdFGbCxefQGXribP762xx4iM/2.jpeg"
     }
     // Add more metadata objects as needed
   ];
@@ -61,9 +61,9 @@ export default function Home() {
       // Create a new instance of the Contract with a Signer, which allows
       // update methods
       const nftContract = new Contract(NFT_CONTRACT_ADDRESS, abi, signer);
-      // call the mint from the contract to mint the LW3Punks
+      // call the mint from the contract to mint the NextTrade
       const tx = await nftContract.mint({
-        // value signifies the cost of one LW3Punks which is "0.01" eth.
+        // value signifies the cost of one NextTrade which is "0.01" eth.
         // We are parsing `0.01` string to ether using the utils library from ethers.js
         value: utils.parseEther("0.01"),
       });
@@ -218,15 +218,15 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>LW3Punks</title>
-        <meta name="description" content="LW3Punks-Dapp" />
+        <title>NextTrade</title>
+        <meta name="description" content="NextTrade-Dapp" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main}>
         <div>
-          <h1 className={styles.title}>Welcome to LW3Punks!</h1>
+          <h1 className={styles.title}>Welcome to NextTrade!</h1>
           <div className={styles.description}>
-            It's an NFT collection for LearnWeb3 students.
+            It's an NFT collection for the trading of clothing NFTs.
           </div>
           {renderConnectButton()}
         </div>
@@ -243,7 +243,7 @@ export default function Home() {
 
       </div>
 
-      <footer className={styles.footer}>Made with &#10084; by LW3Punks</footer>
+      <footer className={styles.footer}>Made with &#10084; by DJ</footer>
     </div>
   );
 }

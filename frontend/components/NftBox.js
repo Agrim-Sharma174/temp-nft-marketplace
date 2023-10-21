@@ -54,7 +54,7 @@ export default function NftBox({ metadata, renderButton }) {
       <h3>{metadata.name}</h3>
       <p>{metadata.description}</p>
       <Image width={300} alt="NFT Image" src={metadata.image} />
-      {renderButton(metadata)} // Pass metadata to renderButton
+      {renderButton(metadata)} 
     </div>
   );
 }
